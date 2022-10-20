@@ -133,6 +133,11 @@
 					"slug": "tertiary",
 					"color": "#535353",
 					"name": "Tertiary"
+				},
+				{
+					"slug": "blue",
+					"color": "#0096ff",
+					"name": "blue"
 				}
 			]
 		},
@@ -178,19 +183,73 @@
 				{
 					"fontFamily": "\"Source Serif Pro\", serif",
 					"name": "Source Serif Pro",
-					"slug": "source-serif-pro"
+					"slug": "source-serif-pro",
+					"fontFace": [
+						{
+							"fontFamily": "Source Serif Pro",
+							"fontWeight": "200 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/source-serif-pro/SourceSerif4Variable-Roman.ttf.woff2" ]
+						},
+						{
+							"fontFamily": "Source Serif Pro",
+							"fontWeight": "200 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/source-serif-pro/SourceSerif4Variable-Italic.ttf.woff2" ]
+						}
+					]
 				},
 				{
-                    "fontFamily": "\"Exo\", sans-serif",
-                    "slug": "source-exo",
-                    "name": "Exo"
-                },
-                {
-                    "fontFamily": "\"Inter\"",
-                    "slug": "source-inter",
-                    "name": "Inter"
-                }
-
+					"fontFamily": "\"Exo\", serif",
+					"name": "Exo",
+					"slug": "source-exo",
+					"fontFace": [
+						{
+							"fontFamily": "Exo",
+							"fontWeight": "200 400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/custom-fonts/exo-regular-webfont.woff2" ]
+						},
+						{
+							"fontFamily": "Exo",
+							"fontWeight": "500 600",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/custom-fonts/exo-medium-webfont.woff2" ]
+						},
+						{
+							"fontFamily": "Exo",
+							"fontWeight": "700 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/custom-fonts/exo-bold-webfont.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Inter\", serif",
+					"name": "Inter",
+					"slug": "source-inter",
+					"fontFace": [
+						{
+							"fontFamily": "Inter",
+							"fontWeight": "400 500",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/custom-fonts/inter-regular-webfont.woff2" ]
+						},
+						{
+							"fontFamily": "Inter",
+							"fontWeight": "600 700 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/custom-fonts/inter-bold-webfont.woff2" ]
+						}
+					]
+				}
 			],
 			"fontSizes": [
 				{
@@ -235,7 +294,7 @@
 					"text": "var(--wp--preset--color--background)"
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--source-inter)"
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			},
 			"core/post-title": {
@@ -276,7 +335,8 @@
 					"fontFamily": "var(--wp--preset--font-family--source-exo)",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"fontSize": "var(--wp--preset--font-size--medium)",
-					"fontWeight": "400"
+					"fontStyle": "italic",
+					"fontWeight": "normal"
 				}
 			}
 		},
@@ -304,7 +364,7 @@
 			"h3": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--source-exo)",
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--custom--typography--font-size--huge)"
 				}
@@ -312,15 +372,15 @@
 			"h4": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--source-exo)",
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-exo)",
-					"fontWeight": "400",
+					"fontFamily": "var(--wp--preset--font-family--source-inter)",
+					"fontWeight": "700",
 					"textTransform": "uppercase",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"fontSize": "var(--wp--preset--font-size--medium)"
@@ -328,7 +388,7 @@
 			},
 			"h6": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-exo)",
+					"fontFamily": "var(--wp--preset--font-family--source-inter)",
 					"fontWeight": "400",
 					"textTransform": "uppercase",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
@@ -346,16 +406,12 @@
 			},
 			"span": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-inter)",
-					"fontWeight": "400",
-					"textTransform": "uppercase",
-					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
-					"fontSize": "var(--wp--preset--font-size--medium)"
+					"fontFamily": "var(--wp--preset--font-family--source-inter)"
 				}
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--foreground)"
+					"text": "var(--wp--preset--color--blue)"
 				}
 			}
 		},

@@ -1032,7 +1032,7 @@ iframe {
 footer.wp-block-template-part {
   margin-top: 0 !important;
 }
-a,
+/* a,
 p,
 span,
 input,
@@ -1068,7 +1068,7 @@ a.button,
 .wp-block-query-title
 {
   font-family: "Exo", sans-serif;
-}
+} */
 .inter-medium {
   font-weight: 500;
 }
