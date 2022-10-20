@@ -1,0 +1,16 @@
+.image-gallery {
+	width: 98%;
+	margin: 30px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+    list-style: none !important;
+	padding: 0;
+}
+.image-gallery li {
+	padding: 20px;
+}
+.image-gallery .image-gallery-image {
+    max-height: 100px;
+}

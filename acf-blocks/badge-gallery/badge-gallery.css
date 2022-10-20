@@ -1,0 +1,17 @@
+.badge-gallery {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none !important;
+  padding: 0;
+}
+.badge-gallery li {
+  padding: 15px;
+}
+.badge-gallery .badge-gallery-item img {
+  height: 100%;
+  width: 100px !important;
+}
