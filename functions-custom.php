@@ -28,10 +28,10 @@ function add_global_styles () {
 }
 
 function add_global_scripts () {
-    wp_enqueue_script('custom-axios', get_stylesheet_directory_uri().'/axios.js');
-	wp_enqueue_script('custom-firebase', get_stylesheet_directory_uri().'/firebase.js');
-	wp_enqueue_script('custom-social-signup', get_stylesheet_directory_uri().'/custom-social-signup.js');
-	wp_enqueue_script('custom-signup', get_stylesheet_directory_uri().'/custom-signup.js');
+    wp_enqueue_script('custom-axios', get_stylesheet_directory_uri().'/axios.js', array('jquery'));
+    wp_enqueue_script('custom-firebase', get_stylesheet_directory_uri().'/firebase.js', array('jquery'));
+    wp_enqueue_script('custom-social-signup', get_stylesheet_directory_uri().'/custom-social-signup.js', array('jquery'));
+    wp_enqueue_script('custom-signup', get_stylesheet_directory_uri().'/custom-signup.js', array('jquery'));
 }
 
 add_action( 'admin_enqueue_scripts', 'add_global_styles' );
