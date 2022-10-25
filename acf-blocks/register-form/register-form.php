@@ -44,7 +44,6 @@
         align-items: center;
         justify-content: space-between;
         max-width: 560px;
-        margin: 0 auto;
     }
 
     .get_start button {

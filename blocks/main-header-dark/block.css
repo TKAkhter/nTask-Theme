@@ -525,13 +525,13 @@ header.header_n {
   position: sticky;
   width: 100%;
   top: 0;
-  background: white;
+  background: #17181A;
   z-index: 99;
   transition: all 0.5s ease;
 }
 
 header.header_n .header_inner_n {
-  background: #ffffff;
+  background: #17181A;
   position: relative;
 }
 
@@ -574,7 +574,7 @@ header.header_n .logo ul {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  border-left: 2px solid #e2e2e2;
+  border-left: 2px solid #17181A;
   margin-left: 25px;
   padding: 0px 0 0px 25px;
   margin: 0 0 0 25px;
@@ -648,7 +648,7 @@ header.header_n .logo ul li.sub_menu:hover {
   background-repeat: no-repeat;
   background-position: 96px;
   color: #00cc90;
-  background-color: #e6f2fa;
+  background-color: #383a3e;
   padding: 8px 30px 12px 13px;
   border-radius: 8px;
 }
@@ -675,12 +675,12 @@ header.header_n .logo ul li.talk-to-sales:hover {
 }
 
 header.header_n .logo ul li a {
-  color: #000000;
+  color: #ffffff;
   padding-bottom: 15px;
 }
 
 header.header_n .logo ul li a.demo {
-  color: #000000;
+  color: #ffffff;
 }
 
 header.header_n .logo ul li a.demo:hover {
@@ -691,7 +691,7 @@ header.header_n .logo ul li ul {
   display: none;
   border: none;
   position: absolute;
-  background: #fff;
+  background: #17181A;
   line-height: 25px;
   box-shadow: #0000001a 0px 0px 7px 0px;
 }
@@ -1409,7 +1409,7 @@ header.header_n .header_inner_n .mobile_nav ul li.nav_link:last-child a:hover {
 
 .inner_box {
   display: none;
-  background: #fff;
+  background: #17181A;
   position: absolute;
   width: 814px;
   height: 296px;
@@ -1513,7 +1513,7 @@ header.header_n .header_inner_n .mobile_nav ul li.nav_link:last-child a:hover {
   font-size: 15px;
   /*font-family: "Inter", sans-serif;*/
   font-weight: 600;
-  color: #212326;
+  color: #ffffff;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -1521,9 +1521,13 @@ header.header_n .header_inner_n .mobile_nav ul li.nav_link:last-child a:hover {
 .menu_text span {
   font-size: 12px;
   font-family: "Inter", sans-serif;
-  color: #616161;
+  color: #ffffff;
   line-height: 15px !important;
   display: inline-block;
+}
+
+.box_control:hover h3, .box_control:hover span {
+    color: #17181A;
 }
 
 .mobile-menu_text span {
