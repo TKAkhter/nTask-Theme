@@ -131,14 +131,45 @@
           "name": "blue"
         },
         {
-          "slug": "green",
+          "slug": "green-tone-1",
           "color": "#00CC90",
-          "name": "green"
+          "name": "green-tone-1"
+        },
+        {
+          "slug": "green-tone-2",
+          "color": "#00CC90",
+          "name": "green-tone-2"
+        },
+        {
+          "slug": "dark-tone-1",
+          "color": "#17181A",
+          "name": "dark-tone-1"
         },
         {
           "slug": "dark-tone-2",
           "color": "#0b0b0b",
           "name": "dark-tone-2"
+        },
+        {
+          "slug": "dark-tone-3",
+          "color": "#181818",
+          "name": "dark-tone-3"
+        },
+
+        {
+          "slug": "grey-tone-1",
+          "color": "#E0E0E0",
+          "name": "grey-tone-1"
+        },
+        {
+          "slug": "grey-tone-2",
+          "color": "#2A2A2A",
+          "name": "grey-tone-2"
+        },
+        {
+          "slug": "grey-tone-3",
+          "color": "#3A3A3A",
+          "name": "grey-tone-3"
         }
       ]
     },
