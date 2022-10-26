@@ -251,27 +251,27 @@
                                                     <ul class="logo_array">
                                                         <li class="">
                                                             <img width="56" height="56"
-                                                                src="<?php echo site_url(); ?>/wp-content/themes/ntasktwentytwo/images/logos/At&T.svg"
+                                                                src="<?php echo get_template_directory_uri() ?>/assets/extras/signup-modal/logos/At&T.svg"
                                                                 alt="Client logo" class="logo_"></li>
                                                         <li class="">
                                                             <img width="56" height="56"
-                                                                src="<?php echo site_url(); ?>/wp-content/themes/ntasktwentytwo/images/logos/Google.svg"
+                                                                src="<?php echo get_template_directory_uri() ?>/assets/extras/signup-modal/logos/Google.svg"
                                                                 alt="Client logo" class="logo_"></li>
                                                         <li class="">
                                                             <img width="56" height="56"
-                                                                src="<?php echo site_url(); ?>/wp-content/themes/ntasktwentytwo/images/logos/Apple.svg"
+                                                                src="<?php echo get_template_directory_uri() ?>/assets/extras/signup-modal/logos/Apple.svg"
                                                                 alt="Client logo" class="logo_"></li>
                                                         <li class="">
                                                             <img width="56" height="56"
-                                                                src="<?php echo site_url(); ?>/wp-content/themes/ntasktwentytwo/images/logos/PayPal.svg"
+                                                                src="<?php echo get_template_directory_uri() ?>/assets/extras/signup-modal/logos/PayPal.svg"
                                                                 alt="Client logo" class="logo_"></li>
                                                         <li class="">
                                                             <img width="56" height="56"
-                                                                src="<?php echo site_url(); ?>/wp-content/themes/ntasktwentytwo/images/logos/Walmart.svg"
+                                                                src="<?php echo get_template_directory_uri() ?>/assets/extras/signup-modal/logos/Walmart.svg"
                                                                 alt="Client logo" class="logo_"></li>
                                                         <li class="">
                                                             <img width="56" height="56"
-                                                                src="<?php echo site_url(); ?>/wp-content/themes/ntasktwentytwo/images/logos/HP.svg"
+                                                                src="<?php echo get_template_directory_uri() ?>/assets/extras/signup-modal/logos/HP.svg"
                                                                 alt="Client logo" class="logo_"></li>
                                                     </ul>
                                                 </div>

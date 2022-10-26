@@ -17,7 +17,6 @@
     .badge-rating .row {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
     }
 
     .badge-rating img {
@@ -59,6 +58,14 @@
         height: 100%;
         max-width: 150px;
         margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+
+        .badge-rating .row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 </style>
 

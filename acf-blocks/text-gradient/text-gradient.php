@@ -29,6 +29,7 @@
         background: linear-gradient(<?php echo get_field('angle'); ?>deg <?php echo $colors_gradient; ?>);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: 'Exo', sans-serif;
 	}
 	@media (max-width: 767px) {
 	    <?php echo '.custom-text-gradient-'.$random_number.' h2'; ?> {

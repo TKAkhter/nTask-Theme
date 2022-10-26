@@ -9,7 +9,7 @@
     $classes = isset($block['className']) ? $block['className'] : $block['id'];
 ?>
 
-<div class="custom-text-gradient custom-text-gradient-<?php echo $random_number.' '.$classes; ?>">
+<div class="multi-text-gradient multi-text-gradient-<?php echo $random_number.' '.$classes; ?>">
 	<<?php echo $heading_tag; ?> style="margin:0;">
         <?php 
             $i = 0;
@@ -34,14 +34,16 @@
 </div>
 
 <style>
-    <?php echo '.custom-text-gradient-'.$random_number.' '.$heading_tag; ?> {
+    <?php echo '.multi-text-gradient-'.$random_number.' '.$heading_tag; ?> {
         font-size: <?php echo $font_size; ?>px;
         font-weight: bold;
-        font-family: 'Exo', sans-serif;
         text-align: <?php echo $font_align; ?>;
 	}
+    <?php echo '.multi-text-gradient-'.$random_number.' '.$heading_tag. ' *'; ?> {
+        font-family: 'Exo', sans-serif;
+    }
 	@media (max-width: 767px) {
-	    <?php echo '.custom-text-gradient-'.$random_number.' '.$heading_tag; ?> {
+	    <?php echo '.multi-text-gradient-'.$random_number.' '.$heading_tag; ?> {
 	        text-align: center;
 	    }
 	}
