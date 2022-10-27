@@ -18,6 +18,7 @@
         display: block;
         padding: 15px 20px;
         color: #ffffff;
+        margin-right: -2px;
     }
 
     .register#_signup_email {
