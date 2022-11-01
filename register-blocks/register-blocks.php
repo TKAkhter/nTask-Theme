@@ -345,6 +345,28 @@ function badge_rating() {
 	}
 }
 
+function paypal_modal() {
+	
+	// check function exists
+	if( function_exists('acf_register_block_type') ) {
+		
+		// register a portfolio item block
+		acf_register_block_type(array(
+			'name'				=> 'paypal-modal',
+			'title'				=> __('Paypal modal'),
+			'description'		=> __('A custom block for Custom Paypal modal'),
+			'render_template'	=> 'acf-blocks/paypal-modal/paypal-modal.php',
+			'enqueue_style' 	=> get_template_directory_uri() . '/acf-blocks/paypal-modal/paypal-modal.css',
+			'enqueue_script' 	=> get_template_directory_uri() . '/acf-blocks/paypal-modal/paypal-modal.js',
+			'category'			=> 'acf-category',
+			'icon'				=> 'block-default',
+			'keywords'			=> array('acf', 'custom', 'pay', 'pal'),
+			'mode' => 'auto',
+		));
+	}
+}
+
+add_action('acf/init', 'paypal_modal');
 add_action('acf/init', 'badge_rating');
 add_action('acf/init', 'badge_gallery');
 add_action('acf/init', 'custom_cta');

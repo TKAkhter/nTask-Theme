@@ -60,6 +60,7 @@
   border-bottom-left-radius: 20px;
   overflow: hidden;
   background-color: #fcfefc;
+  margin: 0;
 }
 
 #kt-layout-id_4762c7-a8 > .kt-row-column-wrap {
@@ -148,8 +149,6 @@ input.register#_signup_email {
   line-height: normal;
   color: #222;
   font-weight: 400;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border: 2px solid #dbdbdb;
   border-radius: 4px;
   font-size: 14px;
   padding-left: 15px;
