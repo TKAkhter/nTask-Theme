@@ -92,6 +92,10 @@
       console.log(e);
       console.log($(".paypal-modal-<?php echo $random_number;?> .trigger"));
       $(".paypal-modal-<?php echo $random_number;?> .trigger").trigger("click");
+      payload = {
+        "amount": <?php echo $tier[get_field('tier_tag')]; ?>
+      }
+      console.log("🚀 ~ file: paypal-modal.php ~ line 98 ~ payload", payload);
     });
   });
 </script>
