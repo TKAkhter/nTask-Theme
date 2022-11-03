@@ -5,7 +5,6 @@ var columns = document.querySelectorAll(".wp-block-kadence-column");
 
 function toggleModal() {
   modal.classList.toggle("show-modal");
-  console.log(columns);
   columns.forEach((item) => {
     item.classList.toggle("modal-hide-content");
   });

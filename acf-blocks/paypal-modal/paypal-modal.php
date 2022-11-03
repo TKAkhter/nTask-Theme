@@ -13,7 +13,7 @@
 
 <div class="paypal-modal paypal-modal-<?php echo $random_number;?>">
   <button class="btn trigger d-none">Click here</button>
-  <div class="modal">
+  <div class="modal modal-order">
     <div class="modal-content">
       <span class="close-button">&times;</span>
       <h2>Hello, I am a modal!</h2>
@@ -23,19 +23,41 @@
       <div id="paypal-button-container-<?php echo $random_number;?>"></div>
     </div>
   </div>
+  <div class="modal modal-success modal-success-<?php echo $random_number; ?>">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div class="tick">
+        <img src="<?php echo get_theme_file_uri();?>/acf-blocks/paypal-modal/assets/tick-icon.svg">
+      </div>
+      <h3>Transaction Successful</h3>
+      <p>please check your email to complete the signup.<br>Check your spam / junk folder if you don't see the email in your inbox.<br>If you already have an account please login</p>
+    </div>
+  </div>
+  <div class="modal modal-fail modal-fail-<?php echo $random_number; ?>">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div class="cross">
+        <img src="<?php echo get_theme_file_uri();?>/acf-blocks/paypal-modal/assets/cross-icon.svg">
+      </div>
+      <h3>Transaction Unsuccessful</h3>
+      <p>Something went Wrong. Please try again later</p>
+    </div>
+  </div>
 </div>
 
 <script src="https://www.paypal.com/sdk/js?client-id=AS-3LBm0Z8WxHiZuc55Iailc9MsDrC1GRyimTkMxOZMSGzhIas__nfewPxZN71e5DxTsXP70KtXFIwgj&currency=USD" data-namespace = "<?php echo $paypal_sdk;?>"></script>
-<!-- Set up a container element for the button -->
 
 <script>
   var payload = {
     "amount": <?php echo $tier[get_field('tier_tag')]; ?>
   }
-  console.log("🚀 ~ file: paypal-modal.php ~ line 33 ~ payload", payload);
-  
+
+  var modalSuccess = document.querySelector(".modal-success-<?php echo $random_number; ?>");
+  var modalFail = document.querySelector(".modal-fail-<?php echo $random_number; ?>");
+  var closeSuccess = document.querySelector(".modal-success-<?php echo $random_number; ?> .close-button");
+  var closeFail = document.querySelector(".modal-fail-<?php echo $random_number; ?> .close-button");
+
   <?php echo $paypal_sdk; ?>.Buttons({
-    // Sets up the transaction when a payment button is clicked
     createOrder: function (data, actions) {
       return fetch("<?php echo $payment_gateway; ?>/api/payments/paypal/orders", {
           method: "post",
@@ -43,13 +65,10 @@
           headers: {
             'Content-Type': 'application/json'
           }
-          // use the "body" param to optionally pass additional order information
-          // like product ids or amount
         })
         .then((response) => response.json())
         .then((order) => order.id);
     },
-    // Finalize the transaction after payer approval
     onApprove: function (data, actions) {
       return fetch(`<?php echo $payment_gateway; ?>/api/payments/paypal/orders/${data.orderID}/<?php echo get_field('tier_tag'); ?>/capture`, {
           method: "post",
@@ -59,27 +78,43 @@
         })
         .then((response) => response.json())
         .then((orderData) => {
-          // Successful capture! For dev/demo purposes:
-          console.log(
-            "Capture result",
-            orderData,
-            JSON.stringify(orderData, null, 2)
-          );
-          var transaction =
-            orderData.purchase_units[0].payments.captures[0];
-          // alert(
-          //   "Transaction " +
-          //   transaction.status +
-          //   ": " +
-          //   transaction.id +
-          //   "\n\nSee console for all available details"
+          // console.log(
+          //   "Capture result",
+          //   orderData,
+          //   JSON.stringify(orderData, null, 2)
           // );
-          // When ready to go live, remove the alert and show a success message within this page. For example:
-          // var element = document.getElementById('paypal-button-container');
-          // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-          // Or go to another URL:  actions.redirect('thank_you.html');
+          modalSuccess.classList.toggle("show-modal");
+          closeSuccess.addEventListener("click", event => {
+            modalSuccess.classList.remove("show-modal");
+          });
+          window.addEventListener("click", event => {
+            if (event.target === modalSuccess) {
+              modalSuccess.classList.remove("show-modal");
+            }
+          });
+          var transaction = orderData.purchase_units[0].payments.captures[0];
+        })
+        .catch((error) => {
+          modalFail.classList.toggle("show-modal");
+          closeFail.addEventListener("click", event => {
+            modalFail.classList.remove("show-modal");
+          });
+          window.addEventListener("click", event => {
+            if (event.target === modalFail) {
+              modalFail.classList.remove("show-modal");
+            }
+          });
         });
     },
+    onError: function (err) {
+      modalFail.classList.toggle("show-modal");
+      closeFail.addEventListener("click", event => {
+        modalFail.classList.remove("show-modal");
+      });
+      modalFail.addEventListener("click", event => {
+        modalFail.classList.remove("show-modal");
+      });
+    }
   })
   .render("#paypal-button-container-<?php echo $random_number;?>");
 </script>
@@ -89,13 +124,10 @@
     $ = window.jQuery;
     $('<?php echo get_field("target_button");?>').click(function (e) {
       e.preventDefault();
-      console.log(e);
-      console.log($(".paypal-modal-<?php echo $random_number;?> .trigger"));
       $(".paypal-modal-<?php echo $random_number;?> .trigger").trigger("click");
       payload = {
         "amount": <?php echo $tier[get_field('tier_tag')]; ?>
       }
-      console.log("🚀 ~ file: paypal-modal.php ~ line 98 ~ payload", payload);
     });
   });
 </script>

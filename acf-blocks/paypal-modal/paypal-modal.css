@@ -27,7 +27,7 @@
   width: 1.5rem;
   font-size: 1.2em;
   line-height: 1;
-  padding: 0 .2em .15em;
+  padding: 0 0.2em 0.15em;
   text-align: center;
   cursor: pointer;
   border-radius: 0.25rem;
@@ -41,10 +41,30 @@
 .show-modal {
   opacity: 1;
   visibility: visible;
-  transform: scale(1.0);
+  transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .modal-hide-content {
   z-index: auto !important;
+}
+
+.modal-success h1,
+.modal-success h3,
+.modal-success p,
+.modal-fail h1,
+.modal-fail h3,
+.modal-fail p {
+  text-align: center;
+}
+.modal-success .tick,
+.modal-fail .cross {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.modal-success .modal-content,
+.modal-fail .modal-content {
+  padding: 15px 10px;
 }
