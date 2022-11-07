@@ -57,7 +57,7 @@
 
 <script>
   var payload = {
-    "amount": <?php echo $tier[get_field('tier_tag')]; ?>
+    "amount": <?php echo $tier[get_field('tier_tag')] ? $tier[get_field('tier_tag')] : 0; ?>
   }
 
   var modalSuccess = document.querySelector(".modal-success-<?php echo $random_number; ?>");
@@ -134,7 +134,7 @@
       e.preventDefault();
       $(".paypal-modal-<?php echo $random_number;?> .trigger").trigger("click");
       payload = {
-        "amount": <?php echo $tier[get_field('tier_tag')]; ?>
+        "amount": <?php echo $tier[get_field('tier_tag')] ? $tier[get_field('tier_tag')] : "0"; ?>
       }
     });
   });

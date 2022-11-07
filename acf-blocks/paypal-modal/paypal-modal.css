@@ -12,6 +12,8 @@
   z-index: 999;
 }
 .modal-content {
+  overflow-y: auto;
+  height: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
