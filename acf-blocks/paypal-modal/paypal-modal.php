@@ -7,7 +7,10 @@
   );
  $random_number = rand();
  $paypal_sdk = "paypal_sdk".$random_number;
- $payment_gateway = 'https://payments.naxxa.io';
+ $payment_gateway =  'https://payment.ntaskmanager.com';
+ $client_id = 'AQJT9MZ6AuSk7RMmaYSuKboaVyUnNWpzdNK0-mJ81nev65-w4w5_pSRAvXnHU-1b1OvKJcG_xO4IqiEl';
+ $payment_gateway_dev = 'https://payments.naxxa.io';
+ $client_id_dev = 'AS-3LBm0Z8WxHiZuc55Iailc9MsDrC1GRyimTkMxOZMSGzhIas__nfewPxZN71e5DxTsXP70KtXFIwgj';
 //  echo '<pre>'.print_r(get_field('tier_tag'),TRUE).'</pre>';
 ?>
 
@@ -16,9 +19,8 @@
   <div class="modal modal-order">
     <div class="modal-content">
       <span class="close-button">&times;</span>
-      <h2>Hello, I am a modal!</h2>
-      <p>Click in the top-right button to close the modal, os just click outside the modal. You can add even a
-        shortcode!
+      <h3>Let's get you set up!</h3>
+      <p>Choose your preferred payment method.
       </p>
       <div id="paypal-button-container-<?php echo $random_number;?>"></div>
     </div>
@@ -30,7 +32,7 @@
         <img src="<?php echo get_theme_file_uri();?>/acf-blocks/paypal-modal/assets/tick-icon.svg">
       </div>
       <h3>Transaction Successful</h3>
-      <p>please check your email to complete the signup.<br>Check your spam / junk folder if you don't see the email in your inbox.<br>If you already have an account please login</p>
+      <p>Please check your email to complete the signup process.<br>Check your Spam/Junk folder if you don't see the email in your inbox.<br>If you already have an account, please login.</p>
     </div>
   </div>
   <div class="modal modal-fail modal-fail-<?php echo $random_number; ?>">
@@ -40,12 +42,12 @@
         <img src="<?php echo get_theme_file_uri();?>/acf-blocks/paypal-modal/assets/cross-icon.svg">
       </div>
       <h3>Transaction Unsuccessful</h3>
-      <p>Something went Wrong. Please try again later</p>
+      <p>Need assistance? Talk to us via the live chat or send us an email at <a href="mailto:support@ntaskmanager.com">support@ntaskmanager.com</a></p>
     </div>
   </div>
 </div>
 
-<script src="https://www.paypal.com/sdk/js?client-id=AS-3LBm0Z8WxHiZuc55Iailc9MsDrC1GRyimTkMxOZMSGzhIas__nfewPxZN71e5DxTsXP70KtXFIwgj&currency=USD" data-namespace = "<?php echo $paypal_sdk;?>"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=<?php echo $client_id; ?>&currency=USD" data-namespace = "<?php echo $paypal_sdk;?>"></script>
 
 <script>
   var payload = {
