@@ -366,6 +366,28 @@ function paypal_modal() {
 	}
 }
 
+function redeem_code() {
+	
+	// check function exists
+	if( function_exists('acf_register_block_type') ) {
+		
+		// register a portfolio item block
+		acf_register_block_type(array(
+			'name'				=> 'redeem-code',
+			'title'				=> __('Redeem Code'),
+			'description'		=> __('A custom block for Custom Redeem Code'),
+			'render_template'	=> 'acf-blocks/redeem-code/redeem-code.php',
+			'enqueue_style' 	=> get_template_directory_uri() . '/acf-blocks/redeem-code/redeem-code.css',
+			'enqueue_script' 	=> get_template_directory_uri() . '/acf-blocks/redeem-code/redeem-code.js',
+			'category'			=> 'acf-category',
+			'icon'				=> 'block-default',
+			'keywords'			=> array('acf', 'custom', 'pay', 'pal', 'redeem', 'code'),
+			'mode' => 'auto',
+		));
+	}
+}
+
+add_action('acf/init', 'redeem_code');
 add_action('acf/init', 'paypal_modal');
 add_action('acf/init', 'badge_rating');
 add_action('acf/init', 'badge_gallery');
