@@ -1,16 +1,22 @@
 <?php
+  $random_number = rand();
+  $paypal_sdk = "paypal_sdk".$random_number;
   $tier = array(
+    'Lifetime_Tier_1'=> 49.00,
+    'Lifetime_Tier_2'=> 99.00,
+    'Lifetime_Tier_3'=> 149.00,
+    'Lifetime_Tier_4'=> 249.00
+  );
+  $payment_gateway =  'https://payment.ntaskmanager.com';
+  $client_id = 'AQJT9MZ6AuSk7RMmaYSuKboaVyUnNWpzdNK0-mJ81nev65-w4w5_pSRAvXnHU-1b1OvKJcG_xO4IqiEl';
+  $tier_dev = array(
     'price_1LuDdWAkv0ZzzVHbIW4G5Xwo'=> 49.00,
     'price_1LuDduAkv0ZzzVHbkdRpBuGD'=> 99.00,
     'price_1LuDeDAkv0ZzzVHbGZV4jOhn'=> 149.00,
     'price_1LuDecAkv0ZzzVHbgcHv4sb6'=> 249.00
   );
- $random_number = rand();
- $paypal_sdk = "paypal_sdk".$random_number;
- $payment_gateway =  'https://payment.ntaskmanager.com';
- $client_id = 'AQJT9MZ6AuSk7RMmaYSuKboaVyUnNWpzdNK0-mJ81nev65-w4w5_pSRAvXnHU-1b1OvKJcG_xO4IqiEl';
- $payment_gateway_dev = 'https://payments.naxxa.io';
- $client_id_dev = 'AS-3LBm0Z8WxHiZuc55Iailc9MsDrC1GRyimTkMxOZMSGzhIas__nfewPxZN71e5DxTsXP70KtXFIwgj';
+  $payment_gateway_dev = 'https://payments.naxxa.io';
+  $client_id_dev = 'AS-3LBm0Z8WxHiZuc55Iailc9MsDrC1GRyimTkMxOZMSGzhIas__nfewPxZN71e5DxTsXP70KtXFIwgj';
 //  echo '<pre>'.print_r(get_field('tier_tag'),TRUE).'</pre>';
 ?>
 
