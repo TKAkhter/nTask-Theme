@@ -9,15 +9,15 @@
   );
   $payment_gateway =  'https://payment.ntaskmanager.com';
   $client_id = 'AQJT9MZ6AuSk7RMmaYSuKboaVyUnNWpzdNK0-mJ81nev65-w4w5_pSRAvXnHU-1b1OvKJcG_xO4IqiEl';
-  $tier_dev = array(
-    'price_1LuDdWAkv0ZzzVHbIW4G5Xwo'=> 49.00,
-    'price_1LuDduAkv0ZzzVHbkdRpBuGD'=> 99.00,
-    'price_1LuDeDAkv0ZzzVHbGZV4jOhn'=> 149.00,
-    'price_1LuDecAkv0ZzzVHbgcHv4sb6'=> 249.00
-  );
+//   $tier_dev = array(
+//     'price_1LuDdWAkv0ZzzVHbIW4G5Xwo'=> 49.00,
+//     'price_1LuDduAkv0ZzzVHbkdRpBuGD'=> 99.00,
+//     'price_1LuDeDAkv0ZzzVHbGZV4jOhn'=> 149.00,
+//     'price_1LuDecAkv0ZzzVHbgcHv4sb6'=> 249.00
+//   );
   $payment_gateway_dev = 'https://payments.naxxa.io';
   $client_id_dev = 'AS-3LBm0Z8WxHiZuc55Iailc9MsDrC1GRyimTkMxOZMSGzhIas__nfewPxZN71e5DxTsXP70KtXFIwgj';
-//  echo '<pre>'.print_r(get_field('tier_tag'),TRUE).'</pre>';
+ //echo '<pre>'.print_r(get_field('tier_tag'),TRUE).'</pre>';
 ?>
 
 <div class="paypal-modal paypal-modal-<?php echo $random_number;?>">
@@ -59,7 +59,7 @@
   var payload = {
     "amount": <?php echo $tier[get_field('tier_tag')] ? $tier[get_field('tier_tag')] : 0; ?>
   }
-
+  var plan =  "<?php echo get_field('tier_tag'); ?>";
   var modalSuccess = document.querySelector(".modal-success-<?php echo $random_number; ?>");
   var modalFail = document.querySelector(".modal-fail-<?php echo $random_number; ?>");
   var closeSuccess = document.querySelector(".modal-success-<?php echo $random_number; ?> .close-button");
@@ -78,7 +78,7 @@
         .then((order) => order.id);
     },
     onApprove: function (data, actions) {
-      return fetch(`<?php echo $payment_gateway; ?>/api/payments/paypal/orders/${data.orderID}/<?php echo get_field('tier_tag'); ?>/capture`, {
+      return fetch(`<?php echo $payment_gateway; ?>/api/payments/paypal/orders/${data.orderID}/${plan}/capture`, {
           method: "post",
           headers: {
             'Content-Type': 'application/json'
@@ -136,6 +136,7 @@
       payload = {
         "amount": <?php echo $tier[get_field('tier_tag')] ? $tier[get_field('tier_tag')] : "0"; ?>
       }
+      plan = "<?php echo get_field('tier_tag'); ?>";
     });
   });
 </script>

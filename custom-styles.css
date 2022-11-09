@@ -1065,8 +1065,7 @@ a.button,
 .font-family-exo,
 .vp-portfolio__item-meta-title a,
 .wp-block-post-title,
-.wp-block-query-title
-{
+.wp-block-query-title {
   font-family: "Exo", sans-serif;
 }
 .inter-medium {
@@ -1166,10 +1165,13 @@ strike.straight::before {
 }
 
 @media (max-width: 786px) {
-        .d-xs-none {
-            display: none;
-        }
-    }
-.align-center .registerForm  {
-    margin: 0 auto;
+  .d-xs-none {
+    display: none;
+  }
+}
+.align-center .registerForm {
+  margin: 0 auto;
+}
+.kt-row-column-wrap {
+  z-index: auto;
 }

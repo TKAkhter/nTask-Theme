@@ -7,14 +7,21 @@ $(function () {
   var closeFail = document.querySelector(".modal-fail .close-button");
   var columns = document.querySelectorAll(".wp-block-kadence-column");
 
-  const liveDomain = "https://payments.naxxa.io";
+  const liveDomain = "https://payment.ntaskmanager.com";
+  const devDomain = "https://payments.naxxa.io";
 
   $(".rgister-redeem-code").submit(function (e) {
     e.preventDefault();
-    let data = $(this).serialize();
+    let data = {
+      firstName: $("#firstName").val(),
+      lastName: $("#lastName").val(),
+      email: $("#email").val(),
+      code: $("#code").val(),
+    };
     $.ajax({
       url: liveDomain + "/api/payments/common/giveaway",
-      data: data,
+      contentType: "application/json",
+      data: JSON.stringify(data),
       type: "POST",
       success: function (data) {
         toggleModal();
