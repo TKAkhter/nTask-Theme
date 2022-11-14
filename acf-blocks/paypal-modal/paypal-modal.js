@@ -12,6 +12,9 @@ function toggleModal() {
     .querySelector(".wp-block-template-part")
     .classList.toggle("modal-hide-content");
   document.querySelector("body").classList.toggle("overflow-hidden");
+  $(".paypal-form").show("fast", function() {
+    $(".payment-method").hide("fast");
+  })
 }
 
 function windowOnClick(event) {

@@ -11,21 +11,24 @@
   /*transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;*/
   z-index: 999;
 }
-
 .modal-content {
+  overflow-y: auto;
+  max-height: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 2rem 2.5rem;
+  padding: 2rem;
   width: 30em;
   border-radius: 0.5rem;
   z-index: 999;
 }
 
 .close-button {
-  float: right;
+  position: absolute;
+  right: 2%;
+  top: 2%;
   width: 1.5rem;
   font-size: 1.2em;
   line-height: 1;
@@ -60,6 +63,7 @@
 .modal-fail h3,
 .modal-fail p {
   text-align: center;
+  margin: 0 0 10px;
 }
 
 .modal-success .tick,
@@ -69,10 +73,10 @@
   display: flex;
 }
 
-.modal-success .modal-content,
+/* .modal-success .modal-content,
 .modal-fail .modal-content {
   padding: 15px 10px;
-}
+} */
 
 footer.wp-block-template-part * {
   z-index: 0;
@@ -114,6 +118,7 @@ button.register {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .redeem-code-form input {

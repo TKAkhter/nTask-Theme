@@ -6,7 +6,7 @@ $(function () {
   var closeSuccess = document.querySelector(".modal-success .close-button");
   var closeFail = document.querySelector(".modal-fail .close-button");
   var columns = document.querySelectorAll(".wp-block-kadence-column");
-
+  var redirectUrl = "https://www.ntaskmanager.com/";
   const liveDomain = "https://payment.ntaskmanager.com";
   const devDomain = "https://payments.naxxa.io";
 
@@ -47,6 +47,7 @@ $(function () {
   closeSuccess.addEventListener("click", function () {
     modalSuccess.classList.toggle("show-modal");
     toggleModal();
+    window.location.href = redirectUrl;
   });
 
   closeFail.addEventListener("click", function () {

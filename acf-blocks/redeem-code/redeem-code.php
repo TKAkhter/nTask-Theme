@@ -26,9 +26,10 @@
       <div class="tick">
         <img src="<?php echo get_theme_file_uri();?>/acf-blocks/paypal-modal/assets/tick-icon.svg">
       </div>
-      <h3>Transaction Successful</h3>
-      <p>Please check your email to complete the signup process.<br>Check your Spam/Junk folder if you don't see the
-        email in your inbox.<br>If you already have an account, please login.</p>
+      <h3>Redemption Successful</h3>
+      <p>Please check your email to complete the Signup.<br>
+      Check your Spam or Junk folder if you don't see the email in your Inbox.<br>
+      If you already have an nTask account, you just need to login.</p>
     </div>
   </div>
   <div class="modal modal-fail">
@@ -37,7 +38,7 @@
       <div class="cross">
         <img src="<?php echo get_theme_file_uri();?>/acf-blocks/paypal-modal/assets/cross-icon.svg">
       </div>
-      <h3>Transaction Unsuccessful</h3>
+      <h3>Redemption Unsuccessful</h3>
       <p>Need assistance? Talk to us via the live chat or send us an email at <a
           href="mailto:support@ntaskmanager.com">support@ntaskmanager.com</a></p>
     </div>
