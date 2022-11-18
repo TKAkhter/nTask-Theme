@@ -44,9 +44,7 @@ $(function () {
       $("#email-msg").addClass("visual-hidden");
       $(".email-msg-alert").empty();
       $(".email-msg-alert").css({
-        border: "none",
-        padding: "0",
-        "margin-bottom": "0",
+        "display": "none"
       });
     });
     
@@ -56,9 +54,7 @@ $(function () {
         $("body").css("overflow-y", "visible");
       $(".email-msg-alert").empty();
       $(".email-msg-alert").css({
-        border: "none",
-        padding: "0",
-        "margin-bottom": "0",
+        "display": "none"
       });
     });
     
@@ -105,9 +101,7 @@ $(function () {
           $("body").css("overflow-y", "visible");
         $(".email-msg-alert").empty();
         $(".email-msg-alert").css({
-          border: "none",
-          padding: "0",
-          "margin-bottom": "0",
+          "display": "block"
         });
       }
     });
@@ -122,7 +116,7 @@ $(function () {
       var liveDomain = "https://app.ntaskmanager.com/";
       var WebsiteDomain = window.location.host + "/";
       // var WebsiteDomain = "https://www.ntaskmanager.com/";
-      var plan = localStorage.getItem("plan") || "businesstrial";
+      var trialplan = localStorage.getItem("trialplan") || "businesstrial";
     
       var apiCall = "api/account/register";
       var userName = username;
@@ -141,12 +135,12 @@ $(function () {
       }
       if (_validateEmail(userName)) {
         $(".email-msg-alert").empty();
-        if (plan == "businesstrial") {
+        if (trialplan == "businesstrial") {
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: "businesstrial_from_website",
           });
-        } else if (plan == "free") {
+        } else if (trialplan == "free") {
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: "free_from_website",
@@ -162,7 +156,7 @@ $(function () {
           url: liveDomain + "api/account/ValidateUserEmailWithDetail",
           data: {
             email: userName,
-            plan: plan,
+            plan: trialplan,
           },
           crossDomain: !0,
           type: "GET",
@@ -178,15 +172,11 @@ $(function () {
           },
           error: function (data) {
             $("#_signup_submit .fa-spinner").addClass("d-none");
+            $(".email-msg-alert").css("display", "block");
             var res = data.responseJSON.message;
             $(".email-msg-alert").html(
               "<div class='alert alert-danger alert-dismissable'>" + res + "</div>"
             );
-            $(".email-msg-alert").css({
-              border: "2px solid red",
-              padding: "18px",
-              "margin-bottom": "5px",
-            });
             $("#loadDiv").hide(); // Now that the submit request has returned we should hide the loader again.
           },
         });
@@ -195,11 +185,6 @@ $(function () {
         $(".email-msg-alert").html(
           "<div class='alert alert-danger alert-dismissable'>The email address entered is invalid.</div>"
         );
-        $(".email-msg-alert").css({
-          border: "2px solid red",
-          padding: "18px",
-          "margin-bottom": "5px",
-        });
         $("#loadDiv").hide(); // Now that the submit request has returned we should hide the loader again.
       }
     }

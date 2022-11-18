@@ -109,7 +109,9 @@
     createOrder: function (data, actions) {
       return fetch("<?php echo $payment_gateway; ?>/api/payments/paypal/orders", {
           method: "post",
-          body: JSON.stringify(payload),
+          body: JSON.stringify({
+            "amount": localStorage.getItem("amount")}
+          ),
           headers: {
             'Content-Type': 'application/json'
           }
@@ -118,7 +120,7 @@
         .then((order) => order.id);
     },
     onApprove: function (data, actions) {
-      return fetch(`<?php echo $payment_gateway; ?>/api/payments/paypal/orders/${data.orderID}/${plan}/capture`, {
+      return fetch(`<?php echo $payment_gateway; ?>/api/payments/paypal/orders/${data.orderID}/${localStorage.getItem("plan")}/capture`, {
           method: "post",
           body: JSON.stringify(userData),
           headers: {
@@ -174,10 +176,15 @@
     $('<?php echo get_field("target_button");?>').click(function (e) {
       e.preventDefault();
       $(".paypal-modal-<?php echo $random_number;?> .trigger").trigger("click");
+      localStorage.setItem("amount","<?php echo $tier[get_field('tier_tag')] ?>");
+      localStorage.setItem("plan","<?php echo get_field('tier_tag'); ?>");
       payload = {
-        "amount": <?php echo $tier[get_field('tier_tag')] ? $tier[get_field('tier_tag')] : "0"; ?>
+        "amount": <?php echo $tier[get_field('tier_tag')]; ?>
       }
       plan = "<?php echo get_field('tier_tag'); ?>";
+      console.log("🚀 ~ file: paypal-modal.php ~ line 178 ~ payload", payload);
+      console.log("🚀 ~ file: paypal-modal.php ~ line 182 ~ plan", plan);
+      console.log("🚀 ~ file: paypal-modal.php ~ line 182 ~ plan", <?php echo $tier[get_field('tier_tag')]; ?>);
     });
   });
 </script>
