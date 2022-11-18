@@ -182,9 +182,6 @@
         "amount": <?php echo $tier[get_field('tier_tag')]; ?>
       }
       plan = "<?php echo get_field('tier_tag'); ?>";
-      console.log("🚀 ~ file: paypal-modal.php ~ line 178 ~ payload", payload);
-      console.log("🚀 ~ file: paypal-modal.php ~ line 182 ~ plan", plan);
-      console.log("🚀 ~ file: paypal-modal.php ~ line 182 ~ plan", <?php echo $tier[get_field('tier_tag')]; ?>);
     });
   });
 </script>
