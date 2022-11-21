@@ -1065,7 +1065,8 @@ a.button,
 .font-family-exo,
 .vp-portfolio__item-meta-title a,
 .wp-block-post-title,
-.wp-block-query-title {
+.wp-block-query-title
+{
   font-family: "Exo", sans-serif;
 }
 .inter-medium {
@@ -1097,7 +1098,7 @@ strike::before {
   left: -4%;
   white-space: nowrap;
   display: block;
-  transform: rotate(10deg);
+  transform: rotate(18deg);
 }
 s.straight::before,
 strike.straight::before {
@@ -1165,39 +1166,16 @@ strike.straight::before {
 }
 
 @media (max-width: 786px) {
-  .d-xs-none {
-    display: none;
-  }
-}
-.align-center .registerForm {
-  margin: 0 auto;
+        .d-xs-none {
+            display: none;
+        }
+    }
+.align-center .registerForm  {
+    margin: 0 auto;
 }
 .kt-row-column-wrap {
-  z-index: auto;
+    z-index: auto;
 }
-
-.alm-listing .css-grid {
-	display: inline-grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-@media screen and (min-width:480px){
-	.alm-listing .css-grid{
-		grid-template-columns: 1fr 1fr;
-	}
-}
-@media screen and (min-width:1024px){
-	.alm-listing .css-grid{
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-}
-.alm-listing .css-grid > div {
-	margin: 0 5px 10px;
-	padding-bottom: 25px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	border: 1px solid #efefef;
-}
-
 .email-msg-alert {
   border: 2px solid red;
   padding: 10px;
