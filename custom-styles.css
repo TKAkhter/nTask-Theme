@@ -1185,3 +1185,21 @@ strike.straight::before {
   background: #fff;
   display: none;
 }
+.register#_signup_email {
+    flex: 2;
+}
+
+.font-blink {
+        animation: blink-animation 1.5s steps(4, start) infinite;
+        -webkit-animation: blink-animation 1.5s steps(4, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }

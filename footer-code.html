@@ -1,0 +1,958 @@
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+    window._qevents = window._qevents || [];
+    
+    (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    })();
+    
+    window._qevents.push({
+    qacct:"p-TL3rtjvW9qe0S",
+    uid:"__INSERT_EMAIL_HERE__"
+    });
+    </script>
+    
+    <noscript>
+    <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-TL3rtjvW9qe0S.gif" border="0" height="1" width="1" alt="Quantcast"/>
+    </div>
+    </noscript>
+    <!-- End Quantcast tag -->
+    
+    <!--Signup Popup-->
+    <style>
+        /*Signup popup*/
+        .signup_hideClass {
+        display: none;
+        }
+        .promo_signup {
+        width: 475px;
+        height: 500px;
+        }
+    
+        .promo_signup .background_bundle {
+        width: 650px;
+        height: 460px;
+        z-index: 0;
+        }
+    
+        .promo_signup .splitted {
+        padding: 25px 33px;
+        }
+    
+        .promo_signup .background_bundle .splitted_background {
+        background-color: #eef7ff;
+        width: 650px;
+        height: 500px;
+        }
+    
+        .promo_signup .background_bundle .splitted_background .img {
+        background: url("images/green_triangle.svg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 650px;
+        height: 500px;
+        }
+    
+        @media (min-width: 768px) {
+        .promo_signup .message_note {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        }
+    
+        .promo_signup .message_note .popup_heading {
+        font: normal normal normal 22px/39px Exo;
+        color: #201d1e;
+        text-align: left;
+        margin-bottom: 22px;
+        margin-top: 0px;
+        width: 390px;
+        }
+    
+        .promo_signup .input_block .input {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 2px solid #dbdbdb;
+        border-radius: 4px;
+        opacity: 1;
+        width: 100%;
+        height: 45px;
+        padding: 5px;
+        display: block;
+        margin-top: 5px;
+        }
+    
+        .promo_signup .input_block .popup_cta {
+        text-align: center;
+        font: normal normal normal 12px/18px "Inter";
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+        width: 137px;
+        height: 42px;
+        background: #00cc90 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        padding: 15px;
+        margin-left: 5px;
+        text-decoration: none;
+        }
+    
+        .promo_signup .promo_image {
+        margin-top: -35px;
+        z-index: 2;
+        position: relative;
+        }
+    
+        .promo_signup .splitted .message_note > * {
+        z-index: 10;
+        }
+    
+        @media (max-width: 550px) {
+        .promo_signup {
+            width: 100%;
+            height: auto;
+        }
+        }
+    
+        @media (min-width: 320px) {
+        .promo_signup {
+            /* width: 100%; */
+            /* height: auto; */
+        }
+    
+        .promo_signup .splitted {
+            padding: 30px 2px;
+        }
+    
+        .promo_signup .background_bundle {
+            width: 275px;
+            position: absolute;
+            z-index: 0;
+        }
+    
+        .promo_signup .background_bundle .splitted_background {
+            background-color: #eef7ff;
+            width: 100%;
+            max-height: 460px;
+        }
+    
+        .promo_signup .background_bundle .splitted_background .img {
+            background: url(images/green_triangle.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            max-height: 460px;
+        }
+    
+        .promo_signup .message_note .popup_heading {
+            font: normal normal normal 22px/39px Exo;
+            color: #201d1e;
+            margin-top: 0px;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .promo_signup .input_block .popup_cta {
+            text-align: center;
+            font: normal normal normal 12px/18px "Inter";
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+            width: 137px;
+            height: 18px;
+            background: #00cc90 0% 0% no-repeat padding-box;
+            border-radius: 4px;
+            padding: 15px;
+            margin-left: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    
+        .promo_signup .promo_image {
+            margin-top: -35px;
+            z-index: 2;
+            position: relative;
+            width: 100%;
+        }
+    
+        .promo_signup .promo_image img {
+            width: 100%;
+            margin-top: 10px;
+        }
+        }
+    
+        @media (min-width: 375px) {
+        .promo_signup {
+            /* width: 100%; */
+            /* height: auto; */
+        }
+    
+        .promo_signup .splitted {
+            padding: 20px 20px;
+        }
+    
+        .promo_signup .background_bundle {
+            width: 325px;
+            position: absolute;
+            z-index: 0;
+        }
+    
+        .promo_signup .background_bundle .splitted_background {
+            background-color: #eef7ff;
+            width: 100%;
+            max-height: 460px;
+        }
+    
+        .promo_signup .background_bundle .splitted_background .img {
+            background: url(images/green_triangle.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            max-height: 460px;
+        }
+    
+        .promo_signup .message_note .popup_heading {
+            font: normal normal normal 22px/39px Exo;
+            color: #201d1e;
+            margin-top: 0px;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .promo_signup .input_block .popup_cta {
+            text-align: center;
+            font: normal normal normal 12px/18px "Inter";
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+            width: 137px;
+            height: 18px;
+            background: #00cc90 0% 0% no-repeat padding-box;
+            border-radius: 4px;
+            padding: 15px;
+            margin-left: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    
+        .promo_signup .promo_image {
+            margin-top: -35px;
+            z-index: 2;
+            position: relative;
+            width: 100%;
+        }
+    
+        .promo_signup .promo_image img {
+            width: 100%;
+            margin-top: 10px;
+        }
+        }
+    
+        @media (min-width: 425px) {
+        .promo_signup {
+            /* width: 100%; */
+            /* height: auto; */
+        }
+    
+        .promo_signup .background_bundle {
+            width: 365px;
+            position: absolute;
+            z-index: 0;
+        }
+    
+        .promo_signup .background_bundle .splitted_background {
+            background-color: #eef7ff;
+            width: 365px;
+            max-height: 460px;
+        }
+    
+        .promo_signup .background_bundle .splitted_background .img {
+            background: url(images/green_triangle.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 365px;
+            max-height: 460px;
+        }
+    
+        .promo_signup .message_note .popup_heading {
+            font: normal normal normal 22px/39px Exo;
+            color: #201d1e;
+            margin-top: 0px;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .promo_signup .input_block .popup_cta {
+            text-align: center;
+            font: normal normal normal 12px/18px "Inter";
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+            width: 137px;
+            height: 18px;
+            background: #00cc90 0% 0% no-repeat padding-box;
+            border-radius: 4px;
+            padding: 15px;
+            margin-left: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    
+        .promo_signup .promo_image {
+            margin-top: -35px;
+            z-index: 2;
+            position: relative;
+            width: 100%;
+        }
+    
+        .promo_signup .promo_image img {
+            width: 100%;
+            margin-top: 10px;
+        }
+        }
+    
+        @media (min-width: 768px) {
+        .promo_signup {
+            /* width: 475px; */
+        }
+    
+        .promo_signup .background_bundle {
+            width: 650px;
+            height: 500px;
+            position: absolute;
+            z-index: 0;
+        }
+    
+        .promo_signup .splitted {
+            padding: 25px 33px;
+        }
+    
+        .promo_signup .background_bundle .splitted_background {
+            background-color: #eef7ff;
+            width: 650px;
+            height: 500px;
+        }
+    
+        .promo_signup .background_bundle .splitted_background .img {
+            background: url("images/green_triangle.svg");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            width: 650px;
+            height: 500px;
+        }
+    
+        .promo_signup .message_note .popup_heading {
+            font: normal normal normal 22px/39px Exo;
+            color: #201d1e;
+            text-align: left;
+            margin-bottom: 22px;
+            margin-top: 0px;
+            width: 390px;
+        }
+    
+        .promo_signup .input_block label {
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    
+        .promo_signup .input_block .popup_cta {
+            text-align: center;
+            font: normal normal normal 12px/18px "Inter";
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+            width: 137px;
+            height: 42px;
+            background: #00cc90 0% 0% no-repeat padding-box;
+            border-radius: 4px;
+            padding: 15px;
+            margin-left: 5px;
+            text-decoration: none;
+        }
+    
+        .promo_signup .promo_image {
+            margin-top: -35px;
+            z-index: 2;
+            position: relative;
+        }
+        }
+    
+        .promo_signup .signup_mask-layout-4 {
+        position: fixed;
+        background: rgba(255, 255, 255, 1);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10000;
+        }
+    
+        .promo_signup .mask-4 {
+        max-width: 516px;
+        position: fixed;
+        width: 94%;
+        margin: 0 auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10000;
+        overflow: auto;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        }
+    
+        @media (min-width: 425px) {
+        .promo_signup .mask-4 {
+            width: 100%;
+        }
+        }
+    
+        @media (min-width: 768px) {
+        .promo_signup .mask-4 {
+            max-width: 650px;
+        }
+        }
+    
+        .promo_signup .mask-4 .table-dv {
+        display: table;
+        width: 100%;
+        height: 100%;
+        }
+    
+        .promo_signup .mask-4 .table-dv .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+        }
+    
+        .promo_signup .mask-4 .table-dv .table-cell ._widget {
+        background-size: cover;
+        margin: 30px auto;
+        position: relative;
+        }
+    
+        @media (min-width: 320px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body a._close {
+            position: absolute;
+            right: 15px;
+            top: 5px;
+            z-index: 2;
+        }
+        }
+    
+        @media (min-width: 375px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body a._close {
+            position: absolute;
+            right: 36px;
+            top: 8px;
+            z-index: 2;
+        }
+        }
+    
+        @media (min-width: 425px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body a._close {
+            position: absolute;
+            right: 30px;
+            top: 5px;
+            z-index: 2;
+        }
+        }
+    
+        @media (min-width: 768px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body a._close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            z-index: 2;
+        }
+        }
+    
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body .promo_blog {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 25px;
+        }
+    
+        @media (min-width: 320px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body .promo_blog {
+            padding: 0 14px;
+        }
+        }
+    
+        @media (min-width: 375px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body .promo_blog {
+            padding: 0 15px;
+        }
+        }
+    
+        @media (min-width: 425px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body .promo_blog {
+            padding: 0 25px;
+        }
+        }
+    
+        @media (min-width: 768px) {
+        .promo_signup .mask-4 .table-dv .table-cell ._widget ._body .promo_blog {
+            flex-direction: row;
+            padding: 0;
+        }
+        }
+    
+        .promo_signup .top_control > a {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        }
+    
+        .promo_signup .top_control a img {
+        width: auto;
+        height: 40px;
+        }
+    
+        .promo_signup .top_control span {
+        position: absolute;
+        top: 55px;
+        right: 25px;
+        color: #7e7e7e;
+        font-family: "Inter", sans-serif;
+        }
+    
+        .promo_signup .customers {
+        font-size: 22px;
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 24px;
+        margin-bottom: 16px;
+        }
+    
+        .promo_signup .logo_class {
+        width: auto;
+        height: 50px;
+        }
+    
+        .promo_signup .logo_array {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        }
+    
+        .promo_signup .logo_array li {
+        margin-left: -10px;
+        }
+    
+        .promo_signup .input_block {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        }
+    
+        .promo_signup .input_block form {
+        text-align: left;
+        }
+    
+        .promo_signup .underline {
+        color: #7e7e7e;
+        font-family: "Inter", sans-serif;
+        font-size: 13px;
+        margin-top: 15px;
+        display: inline-block;
+        margin-bottom: 12px;
+        }
+    
+        .promo_signup .underline a {
+        text-decoration: underline;
+        color: #171717;
+        }
+    
+        .promo_signup .underline a:hover {
+        text-decoration: underline;
+        }
+    
+        .promo_signup .signup_cta {
+        display: inline-block;
+        padding: 15px;
+        background: #0090ff;
+        width: 100%;
+        margin-top: 25px;
+        color: #fff;
+        font-family: "Exo", sans-serif;
+        font-size: 16px;
+        border-radius: 4px;
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+        }
+    
+        .promo_signup .input_section {
+        margin-top: 40px;
+        }
+    
+        .promo_signup .or_text {
+        position: relative;
+        margin-top: 15px;
+        }
+    
+        .promo_signup .line {
+        border-bottom: 1px solid #bfbfbf;
+        position: absolute;
+        width: 100%;
+        margin-top: 13px;
+        }
+    
+        .promo_signup .or_text span {
+        background: #fff;
+        color: #bfbfbf;
+        padding-left: 5px;
+        z-index: 175;
+        display: inline;
+        position: relative;
+        padding-right: 5px;
+        font-family: "Inter", sans-serif;
+        }
+    
+        .promo_signup .google_signin {
+        background: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 26px;
+        width: 100%;
+        text-decoration: none;
+        color: #000;
+        font-family: "Exo", sans-serif;
+        font-size: 16px;
+        border: 1px solid #b2b2b2;
+        margin-top: 15px;
+        display: inline-block;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        }
+    
+        .promo_signup .google_signin span {
+        margin-left: 10px;
+        }
+    
+        .promo_signup .email_input {
+        font-family: "Inter", sans-serif;
+        }
+    
+        .promo_signup .google_button_icon {
+        height: 20px;
+        width: auto;
+        }
+    
+        .promo_signup .signup_mask-layout-4 {
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10000;
+        }
+    </style>
+    
+    <!-- Promo styles -->
+<style>
+	.remind-me-signup {
+		width: 100%;
+	}
+	
+	.remind-me-signup form {
+		background-color: #EEEEEE;
+		padding-left: 20px;
+	}
+
+	.remind-me-signup button.register {
+		text-align: center;
+		font-size: 16px;
+		letter-spacing: 0;
+		width: auto;
+		border-radius: 10px;
+		outline: none;
+		display: block;
+		padding: 15px 20px;
+		color: #ffffff;
+		margin-right: -2px;
+		margin-top: 0;
+	}
+
+	.remind-me-signup .register#_signup_email {
+		-webkit-text-size-adjust: 100%;
+		vertical-align: baseline;
+		line-height: normal;
+		color: #222;
+		font-weight: 400;
+		background: transparent 0% 0% no-repeat padding-box;
+		border: 0;
+		border-radius: 4px;
+		font-size: 14px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 260px;
+		height: 48px;
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.remind-me-signup .remind-me-signup-cm {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 560px;
+		margin: 20px auto 0;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	@media (max-width: 768px) {
+
+		.remind-me-signup .register#_signup_email {
+			margin-left: 10px;
+			padding: 0;
+			width: 50%;
+		}
+
+		.remind-me-signup {
+			margin: 0 auto;
+		}
+	}
+
+	.remind-me-signup .email-msg-success {
+		border: 2px solid #00CC90;
+		padding: 10px;
+		max-width: 555px;
+		margin: 10px auto 0;
+		border-radius: 5px;
+		display: none;
+		color: #ffffff;
+	}
+
+	.remind-me-signup button [disabled=disabled] {
+		border: 1px solid #0c3e2f !important;
+		background-color: #0c3e2f !important;
+	}
+</style>
+<!-- Promo styles -->
+
+    <!--Signup Popup-->
+    <section>
+        <div class="promo_signup signup_hideClass">
+            <div class="mask-layout signup_mask-layout-4">
+                <div class="top_control">
+                    <a href="javascript:void(0)" id="signup_promo_close" class="_close">
+                        <img width="40" height="40"
+                            src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/iconCross.svg" alt="yes">
+                        </a>
+                    <span>Esc</span>
+                </div>
+            </div>
+            <div class="mask-4 promo_mask_4" id="signUp">
+                <div class="table-dv">
+                    <div class="table-cell">
+                        <div class="_widget">
+                            <div class="_body promo_body">
+                                <div class="white_widget">
+                                    <div class="promo_blog">
+                                            <div class="splitted">
+                                                <div class="header_section">
+                                                    <img width="150" height="50" src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/nTask_Logo_06.svg"
+                                                        alt="logo" class="logo_class">
+                                                </div>
+                                                <div class="clients_section">
+                                                    <span class="customers">
+                                                        Join Over 250,000+ Smart Teams for Free
+                                                    </span>
+                                                    <div class="logos">
+                                                        <ul class="logo_array">
+                                                            <li class="">
+                                                                <img width="56" height="56"
+                                                                    src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/signup-modal/logos/At&T.svg"
+                                                                    alt="Client logo" class="logo_"></li>
+                                                            <li class="">
+                                                                <img width="56" height="56"
+                                                                    src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/signup-modal/logos/Google.svg"
+                                                                    alt="Client logo" class="logo_"></li>
+                                                            <li class="">
+                                                                <img width="56" height="56"
+                                                                    src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/signup-modal/logos/Apple.svg"
+                                                                    alt="Client logo" class="logo_"></li>
+                                                            <li class="">
+                                                                <img width="56" height="56"
+                                                                    src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/signup-modal/logos/PayPal.svg"
+                                                                    alt="Client logo" class="logo_"></li>
+                                                            <li class="">
+                                                                <img width="56" height="56"
+                                                                    src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/signup-modal/logos/Walmart.svg"
+                                                                    alt="Client logo" class="logo_"></li>
+                                                            <li class="">
+                                                                <img width="56" height="56"
+                                                                    src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/signup-modal/logos/HP.svg"
+                                                                    alt="Client logo" class="logo_"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="input_section">
+                                                    <div class="input_block">
+                                                        <!-- Promo styles -->
+												<div class="cyber-monday notification-bar">
+													<p><span class="green">40% OFF</span> on all nTask Annual Plans. Offer valid till <span class="yellow">30th November</span>.</p>
+												</div>
+												<div class="block-search remind-me-signup">
+													<form name="remind-me-signup" class="remind-me-signup-cm">
+														<svg style="vertical-align: middle;"
+															xmlns="http://www.w3.org/2000/svg" width="23" height="20"
+															viewBox="0 0 23 20" fill="none">
+															<path fill-rule="evenodd" clip-rule="evenodd"
+																d="M16.4762 0.109863C19.7696 0.109863 22.253 2.79703 22.253 6.36046V13.153C22.253 14.9768 21.6082 16.6245 20.4362 17.7935C19.3849 18.8409 18.021 19.3957 16.492 19.3957H6.7472C5.22115 19.3957 3.85828 18.8419 2.80596 17.7935C1.63398 16.6245 0.989136 14.9768 0.989136 13.153V6.36046C0.989136 2.79703 3.47256 0.109863 6.766 0.109863H16.4762ZM16.4762 1.59339H6.766C4.27861 1.59339 2.47266 3.59813 2.47266 6.36046V13.153C2.47266 14.5802 2.96322 15.855 3.85333 16.7422C4.62081 17.5087 5.62269 17.9122 6.75017 17.9122H16.4762C16.4782 17.9102 16.4861 17.9122 16.492 17.9122C17.6205 17.9122 18.6214 17.5087 19.3888 16.7422C20.28 15.855 20.7695 14.5802 20.7695 13.153V6.36046C20.7695 3.59813 18.9636 1.59339 16.4762 1.59339ZM18.0349 6.17136C18.293 6.48884 18.2445 6.95566 17.9271 7.21478L13.5319 10.7871C12.976 11.2282 12.3114 11.4488 11.6478 11.4488C10.9861 11.4488 10.3265 11.2302 9.77459 10.793L5.33884 7.21676C5.01939 6.95961 4.96994 6.49181 5.22609 6.17334C5.48423 5.85587 5.95104 5.80543 6.26951 6.06158L10.7013 9.63392C11.2581 10.075 12.0424 10.075 12.6032 9.62996L16.9905 6.06356C17.3089 5.80345 17.7758 5.8529 18.0349 6.17136Z"
+																fill="#4D4D4D"></path>
+														</svg>
+														<input type="email" name="email_required"
+															class="interRegular input register email_input"
+															id="_signup_email" required=""
+															placeholder="Enter your e-mail">
+														<div class="g-recaptcha"
+															data-sitekey="6LcYwkwUAAAAAEWwT82GohbCwPpT4HnlmbgxZ3wR">
+														</div>
+														<button type="submit"
+															style="border: 1px solid #00CC90;background-color: #00CC90;"
+															role="button"
+															class="exoRegular sign-up-button register signup_cta"
+															id="_signup_submit">
+															Buy Now <i class="d-none fa fa-spinner fa-spin"></i>
+														</button>
+													</form>
+													<div class="email-msg-alert"
+														style="color: #000000;background: transparent;"></div>
+												</div>
+												<!-- Promo styles -->
+                                                        <!-- <form id="_registerPopupForm" name="signupForm">
+                                                            <label for="">Email Address</label>
+                                                            <input type="email" name="email_required"
+                                                                class="input email_input" id="_signup_popup_email" required
+                                                                placeholder="name@company.com">
+                                                                <div class="email-msg-alert"></div>
+                                                            <span class="underline">By signing up, I agree to the nTask
+                                                                <a href="https://www.ntaskmanager.com/privacy-policy/"
+                                                                    target="_blank" class="inner_link">Privacy
+                                                                    Policy</a> and
+                                                                <a href="https://www.ntaskmanager.com/terms-conditions/"
+                                                                    class="inner_link" target="_blank">Terms of
+                                                                    Service</a>.</span>
+                                                            <div class="g-recaptcha"
+                                                                data-sitekey="6LcYwkwUAAAAAEWwT82GohbCwPpT4HnlmbgxZ3wR">
+                                                            </div>
+                                                            <button type="submit" role="button" class="signup_cta"
+                                                                id="_signup_submit">Sign Up Now
+                                                                <i class="fa fa-spinner fa-spin d-none"></i>
+                                                            </button>
+                                                        </form> -->
+                                                    </div>
+                                                    <div class="or_text color_grey_dark font_regular">
+                                                        <div class="line"></div>
+                                                        <span>or</span>
+                                                    </div>
+                                                    <a href="javascript:void(0);" id="_btnGoogle" class="google_signin">
+                                                        <img width="20" height="20" src="https://www.ntaskmanager.com/wp-content/themes/nTask-Theme/assets/extras/social-icons/iconGoogle.svg"
+                                                            alt="google" class="google_button_icon">
+                                                        <span>Sign Up with Google</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        window.onload = function() {
+            $ = window.jQuery;
+    
+            var Accordion = function(el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
+    
+                // Variables privadas
+                var links = this.el.find(".link");
+                // Evento
+                links.on(
+                    "click", {
+                        el: this.el,
+                        multiple: this.multiple,
+                    },
+                    this.dropdown
+                );
+            };
+    
+            Accordion.prototype.dropdown = function(e) {
+                var $el = e.data.el;
+                ($this = $(this)), ($next = $this.next());
+    
+                $next.slideToggle();
+                $this.parent().toggleClass("open");
+    
+                if (!e.data.multiple) {
+                    $el.find(".submenu").not($next).slideUp().parent().removeClass("open");
+                }
+            };
+    
+            var accordion = new Accordion($("#accordion"), false);
+            var accordion = new Accordion($('#accordion_top'), false);
+        }
+    </script>
+
+    <!-- Promo styles -->
+<script>
+    $(function () {
+        $ = window.jQuery;
+
+        $(".remind-me-signup #_signup_email").focus(function () {
+            $(".remind-me-signup #email-msg").addClass("visual-hidden");
+            $(".remind-me-signup .email-msg-alert").css({
+                "display": "none"
+            });
+        });
+
+        $(".remind-me-signup form").submit(function (e) {
+            e.preventDefault();
+            email = $(".remind-me-signup input").val().trim();
+            var anyErrorFound = _validateEmail(email);
+            if (!anyErrorFound) {
+                $(".remind-me-signup .email-msg-alert").html(
+                "<div class='alert alert-danger alert-dismissable'>The email address entered is invalid.</div>"
+                );
+                $(".remind-me-signup .email-msg-alert").show();
+                e.preventDefault();
+                return;
+            } else {
+                $(".remind-me-signup .email-msg-alert").hide();
+                window.location = `https://app.ntaskmanager.com/welcome/createprofile?email=${email}&plan=business&promoCode=BFCM2022`;
+                
+            }
+        });
+
+        function _validateEmail(email) {
+        var re =
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+        }
+    });
+</script>
+<!-- Promo styles -->

@@ -1,0 +1,55 @@
+<style>
+    .notification-bar {
+        background-color: #000;
+        background-size: contain;
+        background-repeat: repeat-x;
+        background-position: center;
+    }
+
+    .notification-bar .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .notification-bar p {
+        color: white;
+        font-family: "Exo";
+        font-weight: 500;
+        margin: 10px 0;
+        font-size: 25px;
+    }
+
+    .notification-bar .button a {
+        color: #fff;
+        margin-left: 50px;
+        font-weight: 500;
+        font-size: 20px;
+        font-family: "Exo";
+        background: #00cc90;
+        border-radius: 6px;
+        padding: 8px 55px;
+        white-space: nowrap;
+    }
+
+    .notification-bar p .green {
+        color: #ffcc00;
+    }
+
+    .notification-bar p .yellow {
+        color: #00cc90;
+    }
+</style>
+<div class="cyber-monday notification-bar"
+    style="background-image: url(<?php echo get_theme_file_uri(); ?>/blocks/main-header/images/popup-strip.svg);">
+    <div class="row">
+        <div class="col text">
+            <p><span class="green">40% OFF</span> on all nTask Annual Plans. Offer valid till <span class="yellow">30th
+                    November</span>.</p>
+        </div>
+        <div class="col button">
+            <a href="<?php echo site_url(); ?>/cyber-monday/">Get Offer</a>
+        </div>
+    </div>
+</div>

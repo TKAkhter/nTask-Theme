@@ -8,13 +8,17 @@ $(function () {
       $(e.target[1]).children().removeClass("d-none");
       $(e.target[0]).val("");
       $(e.target[0]).val(userName);
-      $("#loadDiv").show();
-      var anyErrorFound = _validateSignupFormControls(userName);
-      if (anyErrorFound) {
-        e.preventDefault(); // If the method returns it will never get to the e.preventdefault at the end of this method. And hence the form will submit. Which is not the goal here.
+      var anyErrorFound = _validateEmail(userName);
+      if (!anyErrorFound) {
+        $(".email-msg-alert").show();
+        $("#_signup_submit .fa-spinner").addClass("d-none");
+        $(".email-msg-alert").html(
+          "<div class='alert alert-danger alert-dismissable'>The email address entered is invalid.</div>"
+        );
+        e.preventDefault();
         return;
       } else {
-        $("#loadDiv").show(); // We need to start showing the loader as soon as the submit request starts.
+        $(".email-msg-alert").hide(); // We need to start showing the loader as soon as the submit request starts.
       }
       partnerStackSignUp(userName);
       _sendSignUpRequest(userName);
@@ -27,13 +31,17 @@ $(function () {
       $("#_signup_submit .fa-spinner").removeClass("d-none");
       $("#_signup_popup_email").val("");
       $("#_signup_popup_email").val(userName);
-      $("#loadDiv").show();
-      var anyErrorFound = _validateSignupFormControls(userName);
-      if (anyErrorFound) {
-        e.preventDefault(); // If the method returns it will never get to the e.preventdefault at the end of this method. And hence the form will submit. Which is not the goal here.
+      var anyErrorFound = _validateEmail(userName);
+      if (!anyErrorFound) {
+        $(".email-msg-alert").show();
+        $("#_signup_submit .fa-spinner").addClass("d-none");
+        $(".email-msg-alert").html(
+          "<div class='alert alert-danger alert-dismissable'>The email address entered is invalid.</div>"
+        );
+        e.preventDefault();
         return;
       } else {
-        $("#loadDiv").show(); // We need to start showing the loader as soon as the submit request starts.
+        $(".email-msg-alert").hide(); // We need to start showing the loader as soon as the submit request starts.
       }
       partnerStackSignUp(userName);
       _sendSignUpRequest(userName);
@@ -85,6 +93,8 @@ $(function () {
       $("body").css("overflow-y", "hidden");
       $("#registerPopupeMail").val("");
       $("#registerPopupeMail").focus();
+      $(".email-msg-alert").hide();
+      
     });
     
     $("#get_started_btn").click(function () {
@@ -172,7 +182,7 @@ $(function () {
           },
           error: function (data) {
             $("#_signup_submit .fa-spinner").addClass("d-none");
-            $(".email-msg-alert").css("display", "block");
+            $(".email-msg-alert").show();
             var res = data.responseJSON.message;
             $(".email-msg-alert").html(
               "<div class='alert alert-danger alert-dismissable'>" + res + "</div>"
@@ -190,13 +200,14 @@ $(function () {
     }
     
     function _validateSignupFormControls(email) {
+      console.log("🚀 ~ file: custom-signup.js ~ line 193 ~ _validateSignupFormControls ~ email", email);
       var anyErrorFound = !1;
       if (email == undefined || email.trim() == "" || email == null) {
-        $("#email-msg").addClass("visual-hidden");
+        $(".email-msg-alert").show();
         anyErrorFound = !0;
-        $("#loadDiv").hide();
+        $(".email-msg-alert").show();
       } else {
-        $("#email-msg").addClass("visual-hidden");
+        // $(".email-msg-alert").show();
       }
       return anyErrorFound;
     }
