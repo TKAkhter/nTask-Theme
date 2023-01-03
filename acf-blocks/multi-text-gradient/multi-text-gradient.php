@@ -2,7 +2,7 @@
 	$random_number = rand();
     // echo '<pre>'.print_r(get_field('multi_text_gradient'),TRUE).'</pre>';
     // echo '<pre>'.print_r($block['className'],TRUE).'</pre>';
-    $heading = get_field('heading');
+    $heading = get_field('heading') ? get_field('heading') : "" ;
     $heading_tag = $heading['heading_tag'] ? $heading['heading_tag'] : 'h2';
     $font_size = $heading['font_size'] ? $heading['font_size'] : '44';
     $font_align = $heading['align'] ? $heading['align'] : 'left';

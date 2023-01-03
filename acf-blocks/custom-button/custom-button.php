@@ -3,7 +3,7 @@
 	$get_url = get_field('link');
 	// echo '<pre>'.print_r(get_field('link') ,TRUE).'</pre>';
 	if($get_url) {
-		$href = 'href="'.$get_url['url'].'"';
+		$href = $get_url['url'] ? 'href="'.$get_url['url'].'"' : 'href="javascript:void(0)"';
 	}
 ?>
 
