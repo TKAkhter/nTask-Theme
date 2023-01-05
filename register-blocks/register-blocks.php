@@ -387,6 +387,27 @@ function redeem_code() {
 	}
 }
 
+function mockup_cta() {
+	
+	// check function exists
+	if( function_exists('acf_register_block_type') ) {
+		
+		// register a portfolio item block
+		acf_register_block_type(array(
+			'name'				=> 'mockup-cta',
+			'title'				=> __('Mock CTA'),
+			'description'		=> __('A custom block for Custom Mock CTA'),
+			'render_template'	=> 'acf-blocks/mockup-cta/mockup-cta.php',
+			'enqueue_style' 	=> get_template_directory_uri() . '/acf-blocks/mockup-cta/mockup-cta.css',
+			'category'			=> 'acf-category',
+			'icon'				=> 'block-default',
+			'keywords'			=> array('acf', 'custom', 'mockup', 'cta', 'call'),
+			'mode' => 'auto',
+		));
+	}
+}
+
+add_action('acf/init', 'mockup_cta');
 add_action('acf/init', 'redeem_code');
 add_action('acf/init', 'paypal_modal');
 add_action('acf/init', 'badge_rating');

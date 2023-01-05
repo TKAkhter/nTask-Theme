@@ -1,0 +1,50 @@
+.mockup-cta .row {
+  display: flex;
+  height: 300px;
+}
+
+.mockup-cta .desktop {
+  align-items: end;
+}
+
+.mockup-cta .laptop {
+  align-items: center;
+}
+
+.mockup-cta .text-section {
+  flex: 2;
+  border-radius: 8px 0 0 8px;
+  padding: 30px;
+}
+
+.mockup-cta .laptop .text-section {
+  margin-right: -30px;
+}
+
+.mockup-cta .desktop .text-section {
+  margin-right: -140px;
+}
+
+.mockup-cta .button {
+  color: #ffffff;
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.mockup-cta .heading,
+.mockup-cta .description {
+  color: #ffffff;
+  font-size: 27px;
+  margin: 0;
+  font-family: "Exo", sans-serif;
+}
+
+.mockup-cta .heading {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mockup-cta .button-section {
+  padding-top: 30px;
+}
