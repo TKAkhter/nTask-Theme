@@ -2365,9 +2365,10 @@ i.fa.fa-chevron-down:before {
 
 #accordion_top {
   padding: 0;
+  margin: 0;
 }
 
 header.header_n .logo ul li a {
-    font-size: 16px;
-    font-family: "Exo",sans-serif;
+  font-size: 16px;
+  font-family: "Exo", sans-serif;
 }

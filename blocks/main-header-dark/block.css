@@ -525,13 +525,13 @@ header.header_n {
   position: sticky;
   width: 100%;
   top: 0;
-  background: #17181A;
+  background: #17181a;
   z-index: 99;
   transition: all 0.5s ease;
 }
 
 header.header_n .header_inner_n {
-  background: #17181A;
+  background: #17181a;
   position: relative;
 }
 
@@ -574,7 +574,7 @@ header.header_n .logo ul {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  border-left: 2px solid #17181A;
+  border-left: 2px solid #17181a;
   margin-left: 25px;
   padding: 0px 0 0px 25px;
   margin: 0 0 0 25px;
@@ -691,7 +691,7 @@ header.header_n .logo ul li ul {
   display: none;
   border: none;
   position: absolute;
-  background: #17181A;
+  background: #17181a;
   line-height: 25px;
   box-shadow: #0000001a 0px 0px 7px 0px;
 }
@@ -1409,7 +1409,7 @@ header.header_n .header_inner_n .mobile_nav ul li.nav_link:last-child a:hover {
 
 .inner_box {
   display: none;
-  background: #17181A;
+  background: #17181a;
   position: absolute;
   width: 814px;
   height: 296px;
@@ -1526,8 +1526,9 @@ header.header_n .header_inner_n .mobile_nav ul li.nav_link:last-child a:hover {
   display: inline-block;
 }
 
-.box_control:hover h3, .box_control:hover span {
-    color: #17181A;
+.box_control:hover h3,
+.box_control:hover span {
+  color: #17181a;
 }
 
 .mobile-menu_text span {
@@ -2369,9 +2370,10 @@ i.fa.fa-chevron-down:before {
 
 #accordion_top {
   padding: 0;
+  margin: 0;
 }
 
 header.header_n .logo ul li a {
-    font-size: 16px;
-    font-family: "Exo",sans-serif;
+  font-size: 16px;
+  font-family: "Exo", sans-serif;
 }

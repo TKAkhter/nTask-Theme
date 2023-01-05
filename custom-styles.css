@@ -52,7 +52,6 @@
 }
 .post-categories-list a {
   border-left: none;
-  /* padding: 0 0 26px 0; */
   color: #7e7e7e;
   font-size: 15px;
   font-family: "Inter", sans-serif;
@@ -206,9 +205,6 @@
 .text-medium .custom-text-gradient h2 {
   font-size: 44px;
 }
-/* .wp-block-kadence-image figure {
-      float: none;
-} */
 
 .wp-block-kadence-advancedheading {
   clear: both;
@@ -224,9 +220,7 @@
 .add-flex .kt-inside-inner-col h5 {
   margin-top: 10px;
 }
-/*.size-full {*/
-/*  width: 100%;*/
-/*}*/
+
 @media (max-width: 769) {
   .border-none {
     display: none;
@@ -343,9 +337,7 @@
     margin: 0 auto;
   }
 }
-.kt-inside-inner-col {
-  /*display: block !important;*/
-}
+
 .single-post .wp-site-blocks,
 .blog .wp-site-blocks,
 .archive .wp-site-blocks,
@@ -353,36 +345,21 @@
 .page .wp-site-blocks {
   padding: 0;
 }
-/*.single-post .wp-site-blocks header header.wp-block-template-part,*/
-/*.single-post footer.wp-block-template-part,*/
-/*.single-post .wp-site-blocks .post-content,*/
-/*.single-post .wp-site-blocks .post-hero-section,*/
-/*.blog .wp-site-blocks header header.wp-block-template-part,*/
-/*.blog footer.wp-block-template-part,*/
-/*.blog .wp-site-blocks .post-content,*/
-/*.blog .wp-site-blocks .post-hero-section,*/
-/*.archive .wp-site-blocks header header.wp-block-template-part,*/
-/*.archive footer.wp-block-template-part,*/
-/*.archive .wp-site-blocks .post-content,*/
-/*.archive .wp-site-blocks .post-hero-section,*/
-/*.search .wp-site-blocks header header.wp-block-template-part,*/
-/*.search footer.wp-block-template-part,*/
-/*.search .wp-site-blocks .post-content,*/
-/*.search .wp-site-blocks .post-hero-section,*/
-/*.page .wp-site-blocks .post-contents {*/
-/*  padding-left: var(--wp--custom--spacing--outer);*/
-/*  padding-right: var(--wp--custom--spacing--outer);*/
-/*}*/
+
 .single-post .wp-site-blocks header.wp-block-template-part,
 .blog .wp-site-blocks header.wp-block-template-part,
 .archive .wp-site-blocks header.wp-block-template-part,
 .search .wp-site-blocks header.wp-block-template-part,
 .page .wp-site-blocks header.wp-block-template-part {
-  position: sticky;
   top: 0;
   background: white;
   z-index: 99;
   transition: all 0.5s ease;
+}
+
+header.wp-block-template-part.sticky {
+  position: sticky;
+  box-shadow: 0 2px 12px 0 rgb(36 50 66 / 8%);
 }
 
 .table-of-contents ul {
@@ -433,7 +410,6 @@
   border: 2px solid #0096ff;
   padding: 0 0 17px 0;
   margin: 23px 0;
-  /*display: inline-block;*/
   display: none;
   width: 100%;
 }
@@ -634,7 +610,6 @@
   border-radius: 100%;
 }
 .contact_page .contact_inner {
-  /* max-width: 900px; */
   width: 100%;
   margin: 0 auto;
 }
@@ -1014,10 +989,6 @@ iframe {
   justify-content: center;
 }
 
-/*.footer-form .block-search {*/
-/*  width: 520px;*/
-/*  margin: 0 auto;*/
-/*}*/
 #align-box-text > div {
   display: flex;
   flex-direction: column;
@@ -1065,8 +1036,7 @@ a.button,
 .font-family-exo,
 .vp-portfolio__item-meta-title a,
 .wp-block-post-title,
-.wp-block-query-title
-{
+.wp-block-query-title {
   font-family: "Exo", sans-serif;
 }
 .inter-medium {
@@ -1166,15 +1136,15 @@ strike.straight::before {
 }
 
 @media (max-width: 786px) {
-        .d-xs-none {
-            display: none;
-        }
-    }
-.align-center .registerForm  {
-    margin: 0 auto;
+  .d-xs-none {
+    display: none;
+  }
+}
+.align-center .registerForm {
+  margin: 0 auto;
 }
 .kt-row-column-wrap {
-    z-index: auto;
+  z-index: auto;
 }
 .email-msg-alert {
   border: 2px solid red;
@@ -1186,20 +1156,26 @@ strike.straight::before {
   display: none;
 }
 .register#_signup_email {
-    flex: 2;
+  flex: 2;
 }
 
 .font-blink {
-        animation: blink-animation 1.5s steps(4, start) infinite;
-        -webkit-animation: blink-animation 1.5s steps(4, start) infinite;
-      }
-      @keyframes blink-animation {
-        to {
-          visibility: hidden;
-        }
-      }
-      @-webkit-keyframes blink-animation {
-        to {
-          visibility: hidden;
-        }
-      }
+  animation: blink-animation 1.5s steps(4, start) infinite;
+  -webkit-animation: blink-animation 1.5s steps(4, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.box-shadow {
+  box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
