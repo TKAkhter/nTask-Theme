@@ -610,7 +610,8 @@ header.header_n .logo ul {
   }
 }
 
-header.header_n .logo ul li {
+header.header_n .logo ul li,
+.header_inner_n .book-call > a {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   margin-right: 20px;
@@ -621,13 +622,19 @@ header.header_n .logo ul li.sub_menu {
   background: url("./images/downarrow.svg");
   background-repeat: no-repeat;
   /* background-position: 86px; */
-  background-position: 96px 20px;
+  background-position: 90px 20px;
   padding: 8px 30px 12px 13px;
+}
+
+.header_inner_n .book-call > li.sub_menu {
+  background: url("./images/downarrowblue.svg");
+  background-repeat: no-repeat;
+  background-position: 90px 20px;
 }
 
 #second {
   /* background-position: 96px; */
-  background-position: 110px 20px;
+  background-position: 100px 20px;
 }
 
 #forth-reports {
@@ -643,10 +650,15 @@ header.header_n .logo ul li.sub_menu {
   padding: 8px 14px 12px 14px;
 }
 
-header.header_n .logo ul li.sub_menu:hover {
-  background: url("images/up_arrow.svg");
+#fifth {
+  background-position: 110px 24px;
+}
+
+header.header_n .logo ul li.sub_menu:hover,
+.header_inner_n .book-call:hover > li {
+  background: url("images/up_arrowblue.svg");
   background-repeat: no-repeat;
-  background-position: 96px;
+  background-position: 90px 20px;
   color: #00cc90;
   background-color: #383a3e;
   padding: 8px 30px 12px 13px;
@@ -781,6 +793,7 @@ header.header_n .header_inner_n .mobile_nav ul li.nav_link {
     display: inline-block;
     margin-bottom: 15px;
     margin-right: 10px;
+    margin-left: 10px;
   }
 
   header.header_n .header_inner_n .mobile_nav ul li.nav_link.sign-up-link {
@@ -1429,8 +1442,9 @@ header.header_n .header_inner_n .mobile_nav ul li.nav_link:last-child a:hover {
 
 .sub_menu:hover .inner_box {
   display: block;
-  margin-top: 2px;
   z-index: 1;
+  margin-top: -5px;
+  margin-left: -10px;
 }
 
 .box_control {
@@ -2373,7 +2387,47 @@ i.fa.fa-chevron-down:before {
   margin: 0;
 }
 
-header.header_n .logo ul li a {
+header.header_n .logo ul li a,
+.header_inner_n .book-call a {
   font-size: 16px;
   font-family: "Exo", sans-serif;
+}
+
+.book-call {
+  display: inline-block;
+  border-right: 2px solid #e2e2e2;
+  padding-right: 10px;
+}
+
+.book-call #fifth {
+  background-color: #e0effa;
+  padding: 12px 35px 12px 20px;
+  border-radius: 4px;
+}
+
+.book-call .inner_box {
+  width: 650px;
+  height: 100px;
+  left: 45vw;
+}
+
+@media (max-width: 1100px) {
+  .book-call .inner_box {
+    width: 420px;
+    height: 130px;
+    left: 50vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .book-call {
+    display: none;
+  }
+}
+
+.book-call #book-call li {
+  width: auto;
+}
+
+.book-call #book-call .ul-row {
+  padding-top: 5px;
 }

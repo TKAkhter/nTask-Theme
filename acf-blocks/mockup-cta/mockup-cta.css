@@ -12,12 +12,14 @@
 }
 
 .mockup-cta .desktop img {
-  max-width: 480px;
+  max-width: 470px;
   margin-bottom: -12px;
+  max-height: 355px;
 }
 
 .mockup-cta .laptop img {
   max-width: 380px;
+  max-height: 285px;
 }
 
 .mockup-cta .text-section {
@@ -31,7 +33,7 @@
 }
 
 .mockup-cta .desktop .text-section {
-  margin-right: -220px;
+  margin-right: -200px;
 }
 
 .mockup-cta .button {

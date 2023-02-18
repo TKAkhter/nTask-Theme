@@ -10,7 +10,7 @@
             <p class="heading"><?php echo get_field('heading'); ?></p>
             <p class="description"><?php echo get_field('description'); ?></p>
             <div class="button-section">
-                <a class="button" style="background-color: <?php echo get_field('button_color'); ?>;" href="javascript:void(0)"><?php echo get_field('button_text'); ?></a>
+                <a class="button sign-up-link" style="background-color: <?php echo get_field('button_color'); ?>;" href="javascript:void(0)"><?php echo get_field('button_text'); ?></a>
             </div>
         </div>
         <div class="col">
