@@ -407,6 +407,27 @@ function mockup_cta() {
 	}
 }
 
+function category_list() {
+	
+	// check function exists
+	if( function_exists('acf_register_block_type') ) {
+		
+		// register a portfolio item block
+		acf_register_block_type(array(
+			'name'				=> 'category-list',
+			'title'				=> __('Category List'),
+			'description'		=> __('A custom block for Custom Category List'),
+			'render_template'	=> 'acf-blocks/category-list/category-list.php',
+			'enqueue_style' 	=> get_template_directory_uri() . '/acf-blocks/category-list/category-list.css',
+			'category'			=> 'acf-category',
+			'icon'				=> 'block-default',
+			'keywords'			=> array('acf', 'custom', 'category', 'list'),
+			'mode' => 'auto',
+		));
+	}
+}
+
+add_action('acf/init', 'category_list');
 add_action('acf/init', 'mockup_cta');
 add_action('acf/init', 'redeem_code');
 add_action('acf/init', 'paypal_modal');

@@ -11,6 +11,15 @@
   align-items: center;
 }
 
+.mockup-cta .desktop img {
+  max-width: 480px;
+  margin-bottom: -12px;
+}
+
+.mockup-cta .laptop img {
+  max-width: 380px;
+}
+
 .mockup-cta .text-section {
   flex: 2;
   border-radius: 8px 0 0 8px;
@@ -18,11 +27,11 @@
 }
 
 .mockup-cta .laptop .text-section {
-  margin-right: -30px;
+  margin-right: -200px;
 }
 
 .mockup-cta .desktop .text-section {
-  margin-right: -140px;
+  margin-right: -220px;
 }
 
 .mockup-cta .button {
@@ -38,6 +47,7 @@
   font-size: 27px;
   margin: 0;
   font-family: "Exo", sans-serif;
+  max-width: 70%;
 }
 
 .mockup-cta .heading {
@@ -47,4 +57,43 @@
 
 .mockup-cta .button-section {
   padding-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .mockup-cta .row {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .mockup-cta .text-section {
+    margin: 0;
+    border-radius: 8px;
+    width: 80%;
+  }
+
+  .mockup-cta .laptop .text-section {
+    padding: 160px 50px 40px;
+    margin-top: -150px;
+    margin-right: 0;
+  }
+
+  .mockup-cta .desktop .text-section {
+    padding: 220px 50px 40px;
+    margin-top: -190px;
+    margin-right: 0;
+  }
+
+  .mockup-cta .heading,
+  .mockup-cta .description,
+  .mockup-cta .button-section {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .mockup-cta img {
+    position: relative;
+  }
 }

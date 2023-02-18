@@ -42,20 +42,46 @@
 .post-categories-list {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
-.post-categories-list li {
-  margin: 0 20px 0 0;
+.post-categories-list li,
+.post-categories-list select {
+  margin: 0px 10px 15px 0;
   display: inline-block;
+  padding: 5px 20px;
+  border-radius: 50px;
+  border: 1px solid #bfbfbf;
+  box-shadow: 0 2px 12px 0 rgb(36 50 66 / 10%);
 }
+
+.post-categories-list select {
+  padding: 9px 0 9px 30px;
+  width: 110px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
 .post-categories-search .wp-block-search__inside-wrapper {
   justify-content: end;
 }
 .post-categories-list a {
   border-left: none;
-  color: #7e7e7e;
+  color: #000000;
   font-size: 15px;
   font-family: "Inter", sans-serif;
 }
+
+.post-categories-list li:hover {
+  transition: all 0.5s ease;
+  background-color: #0d6efd;
+}
+
+.post-categories-list li:hover a {
+  color: #ffffff;
+}
+
 @media (max-width: 1025px) {
   .post-categories-list a {
     font-size: 13px;
@@ -75,11 +101,15 @@
 .logo_array {
   padding: 0;
 }
-.post-categories-list a[aria-current="page"] {
-  color: #000000;
-  border-bottom: 3px solid #78a741;
+.post-categories-list .current-cat {
+  background-color: #0d6efd;
+}
+
+.post-categories-list .current-cat a {
+  color: #ffffff;
 }
 .post-categories-search input[type="search"] {
+  margin-bottom: 15px;
   border: 1px solid #bfbfbf;
   border-radius: 4px;
   font-size: 15px;
@@ -1178,4 +1208,59 @@ strike.straight::before {
   box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-img-100 img {
+  width: 100%;
+}
+
+.alm-listing .css-grid {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.alm-listing .css-grid {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 580px) {
+  .alm-listing .css-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .alm-listing .css-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.alm-listing .css-grid > div {
+  margin: 10px;
+  padding-bottom: 25px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #efefef;
+}
+
+.alm-item .post-fit {
+  height: 250px;
+  object-fit: cover;
+}
+
+.alm-load-more-btn.more {
+  border: 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  background: #00cc90;
+  padding: 10px 30px;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.alm-item .taxonomy-category a {
+  color: #7e7e7e;
 }

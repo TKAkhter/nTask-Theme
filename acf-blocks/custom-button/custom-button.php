@@ -1,14 +1,15 @@
 <?php 
 	$random_number = rand();
 	$get_url = get_field('link');
-	// echo '<pre>'.print_r(get_field('link') ,TRUE).'</pre>';
+	$class_name = $block['className'] ? $block['className'] : '';
+	$href = "javascript:void(0)";
 	if($get_url) {
-		$href = $get_url['url'] ? 'href="'.$get_url['url'].'"' : 'href="javascript:void(0)"';
+		$href = $get_url['url'] ? $get_url['url'] : "javascript:void(0)";
 	}
 ?>
 
 <div class="set-align">
-	<a id="custom-button-<?php echo $random_number ?>" class="custom-button" <?php echo $href; ?>
+	<a id="custom-button-<?php echo $random_number ?>" class="custom-button <?php echo $class_name; ?> " href="<?php echo $href; ?>"
 		style="color:<?php echo get_field('color') ?>">
 		<span>
 			<?php echo get_field('text') ?>
